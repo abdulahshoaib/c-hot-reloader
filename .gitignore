@@ -1,0 +1,24 @@
+# === Build Artifacts ===
+build/
+*.o
+*.out
+*.a
+*.exe
+*.elf
+*.bin
+
+# === Binaries ===
+c-hot-reload
+*.dSYM/
+
+# === Logs & Debug ===
+*.log
+*.core
+core.*
+vgcore.*
+*.stackdump
+
+# === Python scripts ===
+__pycache__/
+*.pyc
+*.pyo
