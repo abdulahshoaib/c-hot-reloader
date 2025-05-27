@@ -1,7 +1,4 @@
+// launches watcher, runner, builder, UI
 #include <stdlib.h>
 
-int main(void)
-{
-    // launches watcher, runner, builder, UI
-    return EXIT_SUCCESS;
-}
+int thread(void) { return EXIT_SUCCESS; }

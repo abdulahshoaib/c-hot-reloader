@@ -1,7 +1,4 @@
+// safe print, mutex wrappers
 #include <stdlib.h>
 
-int main(void)
-{
-    // safe print, mutex wrappers
-    return EXIT_SUCCESS;
-}
+int thread_utils(void) { return EXIT_SUCCESS; }

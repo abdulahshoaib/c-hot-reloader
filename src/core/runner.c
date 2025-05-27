@@ -1,7 +1,4 @@
+// forks and exec target binaries
 #include <stdlib.h>
 
-int main(void)
-{
-    // forks and exec target binaries
-    return EXIT_SUCCESS;
-}
+int runner(void) { return EXIT_SUCCESS; }

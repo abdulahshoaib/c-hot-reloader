@@ -1,7 +1,4 @@
+// detection of changes in files
 #include <stdlib.h>
 
-int main(void)
-{
-    // detection of changes in files
-    return EXIT_SUCCESS;
-}
+int watcher(void) { return EXIT_SUCCESS; }

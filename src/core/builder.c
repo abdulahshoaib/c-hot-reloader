@@ -1,8 +1,4 @@
+// Recompiles the target program on any change
 #include <stdlib.h>
 
-int main(void)
-{
-    // Recompiles the target program
-    // on any change
-    return EXIT_SUCCESS;
-}
+int builder(void) { return EXIT_SUCCESS; }
