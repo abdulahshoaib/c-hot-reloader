@@ -6,7 +6,7 @@
 - [Installation](#installation)
 - [Project Details](#project-details)
 
-# Usage
+## Usage
 
 Lorem ipsum dolor sit amet consectetur adipiscing elit. Placerat in id cursus mi pretium tellus duis.
 Urna tempor pulvinar vivamus fringilla lacus nec metus. Integer nunc posuere ut hendrerit semper vel class.
@@ -17,7 +17,7 @@ Cras eleifend turpis fames primis vulputate ornare sagittis. Libero feugiat tris
 Cubilia curae hac habitasse platea dictumst lorem ipsum. Faucibus ex sapien vitae pellentesque sem placerat in.
 Tempus leo eu aenean sed diam urna tempor.
 
-# Installation
+## Installation
 
 Lorem ipsum dolor sit amet consectetur adipiscing elit. Placerat in id cursus mi pretium tellus duis.
 Urna tempor pulvinar vivamus fringilla lacus nec metus. Integer nunc posuere ut hendrerit semper vel class.
@@ -28,7 +28,7 @@ Cras eleifend turpis fames primis vulputate ornare sagittis. Libero feugiat tris
 Cubilia curae hac habitasse platea dictumst lorem ipsum. Faucibus ex sapien vitae pellentesque sem placerat in.
 Tempus leo eu aenean sed diam urna tempor.
 
-# Project Details
+## Project Details
 
 Lorem ipsum dolor sit amet consectetur adipiscing elit. Placerat in id cursus mi pretium tellus duis.
 Urna tempor pulvinar vivamus fringilla lacus nec metus. Integer nunc posuere ut hendrerit semper vel class.
