@@ -1,1 +1,1 @@
-# c-hot-reloader
+# C Hot Reloader
