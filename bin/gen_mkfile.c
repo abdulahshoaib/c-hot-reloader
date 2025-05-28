@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-int main(void)
+int gen_makefile(void)
 {
     // read all the c files in the proj
     // and then add them to the Makefile

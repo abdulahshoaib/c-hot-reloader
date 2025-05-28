@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-int main(void)
+int read_makefile(void)
 {
     // read if there is already
     // Makefile
