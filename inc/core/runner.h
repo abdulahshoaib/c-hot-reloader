@@ -2,7 +2,6 @@
 #ifndef RUNNER_H
 #define RUNNER_H
 
-int run(const char *binary_path);
-void stop(void);
+int runner(void);
 
 #endif // !RUNNER_H
