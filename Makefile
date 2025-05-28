@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Iinc
-LDFLAGS = -pthread
+LDFLAGS = -pthread -lncurses
 
 SRC = src
 INC = inc
