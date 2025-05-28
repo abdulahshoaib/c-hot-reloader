@@ -48,6 +48,13 @@ void ui_render_log_a(const char *msg, const char *arg) {
   refresh();
 }
 
+void ui_render_output(char *output) {
+  attron(A_BOLD);
+  printw("%s\n", output);
+  attroff(A_BOLD);
+  refresh();
+}
+
 void ui_cleanup(void) { endwin(); }
 
 int ui_getinput(void) {
