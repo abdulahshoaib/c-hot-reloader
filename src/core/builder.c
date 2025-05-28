@@ -10,8 +10,8 @@ int build_target(const char *path) {
   pid_t pid = fork();
 
   if (pid == 0) {
-    execlp("gcc", "gcc", path, "-o", "build/target", NULL);
-    ui_render_error("[ERROR] execlp() Failed");
+    execlp("gcc", "gcc", path, "-o", "target", NULL);
+    ui_render_error("execlp() Failed");
     exit(0);
   }
 
@@ -22,7 +22,7 @@ int build_target(const char *path) {
   }
 
   else {
-    ui_render_error("[ERROR] fork() Failed");
+    ui_render_error("fork() Failed");
     return -1;
   }
 }

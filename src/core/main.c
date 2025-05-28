@@ -1,4 +1,5 @@
 #include "core/builder.h"
+#include "core/runner.h"
 #include "ui/ui.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -17,8 +18,10 @@ int main(int argc, char *argv[]) {
   while (1) {
     if (build_target(target) == 0)
       ui_render_log_a(target, "built");
+    if (runner() == 0)
+      ui_render_output("\n\n=============");
     if (ui_getinput() == -1)
-      break;
+        break;
   }
 
   ui_cleanup();
