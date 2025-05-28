@@ -1,6 +1,8 @@
 #include "core/builder.h"
 #include "core/runner.h"
+#include "core/watcher.h"
 #include "ui/ui.h"
+#include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -12,18 +14,21 @@ int main(int argc, char *argv[]) {
 
   const char *target = argv[1];
 
+  pthread_t tid_watcher;
+  pthread_create(&tid_watcher, NULL, start_watcher, (void *)(target));
+
   ui_init();
   ui_render_log_a("File Selected", target);
 
-  while (1) {
-    if (build_target(target) == 0)
-      ui_render_log_a(target, "built");
-    if (runner() == 0)
-      ui_render_output("\n\n=============");
-    if (ui_getinput() == -1)
-        break;
-  }
+  if (build_target(target) == 0)
+    ui_render_log_a(target, "built");
+  if (runner() == 0)
+    ui_render_output("\n\n=============");
+  if (ui_getinput() == -1)
 
+  ui_render_log("x");
+  stop_watcher();
+  pthread_join(tid_watcher, NULL);
   ui_cleanup();
 
   return EXIT_SUCCESS;
