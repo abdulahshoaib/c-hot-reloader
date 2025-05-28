@@ -4,6 +4,7 @@
 
 void ui_init(void);
 void ui_render_log(const char *msg);
+void ui_render_log_a(const char *msg, const char *arg);
 void ui_render_error(const char *err);
 int ui_getinput(void);
 void ui_cleanup(void);
