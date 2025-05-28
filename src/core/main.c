@@ -1,3 +1,4 @@
+#include "core/builder.h"
 #include "ui/ui.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -8,19 +9,19 @@ int main(int argc, char *argv[]) {
     return EXIT_FAILURE;
   }
 
+  const char *target = argv[1];
+
   ui_init();
-  ui_render_log("Moniterring Changes...");
-  ui_render_error("error");
+  ui_render_log_a("File Selected", target);
 
   while (1) {
+    if (build_target(target) == 0)
+      ui_render_log_a(target, "built");
     if (ui_getinput() == -1)
       break;
   }
 
   ui_cleanup();
-  system("clear");
-
-  printf("argument: %s", argv[1]);
 
   return EXIT_SUCCESS;
 }
