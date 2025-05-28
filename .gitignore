@@ -22,3 +22,5 @@ vgcore.*
 __pycache__/
 *.pyc
 *.pyo
+
+some.c
