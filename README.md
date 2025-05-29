@@ -1,5 +1,8 @@
 # C Hot Reloader
 
+# TO-DO
+Need to thread the entire program, only threading the watcher is not working
+
 # TOC
 
 - [Usage](#usage)
