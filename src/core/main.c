@@ -15,20 +15,25 @@ int main(int argc, char *argv[]) {
   const char *target = argv[1];
 
   pthread_t tid_watcher;
-  pthread_create(&tid_watcher, NULL, start_watcher, (void *)(target));
 
   ui_init();
   ui_render_log_a("File Selected", target);
 
+  while(1){
   if (build_target(target) == 0)
     ui_render_log_a(target, "built");
   if (runner() == 0)
     ui_render_output("\n\n=============");
+  pthread_create(&tid_watcher, NULL, start_watcher, (void *)(target));
+  pthread_join(tid_watcher, NULL);
   if (ui_getinput() == -1)
+      break;
+  }
+  // threading needed across the program not working
+  // just for the watcher program
 
   ui_render_log("x");
   stop_watcher();
-  pthread_join(tid_watcher, NULL);
   ui_cleanup();
 
   return EXIT_SUCCESS;
