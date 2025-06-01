@@ -18,14 +18,13 @@ int main(int argc, char *argv[]) {
 
   ui_init();
   ui_render_log_a("File Selected", target);
+  ui_render_log("Hello ashan");
 
   while(1){
   if (build_target(target) == 0)
     ui_render_log_a(target, "built");
   if (runner() == 0)
     ui_render_output("\n\n=============");
-  pthread_create(&tid_watcher, NULL, start_watcher, (void *)(target));
-  pthread_join(tid_watcher, NULL);
   if (ui_getinput() == -1)
       break;
   }
